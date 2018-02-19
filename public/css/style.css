@@ -24,6 +24,10 @@ h1 {
   font-style: italic;
 }
 
+.top-vertical-align {
+  vertical-align:top;
+}
+
 h2 {
   font-size: 47px; }
   @media (max-width: 768px) {
