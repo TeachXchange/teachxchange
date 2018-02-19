@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "teachxchange_user",
+    "password": "teachxchange_user",
+    "database": "teachxchange_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
