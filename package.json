@@ -4,7 +4,6 @@
   "description": "A platform for educators to exchange resources",
   "scripts": {
     "start": "nodemon -L app.js",
-    "test": "mocha --recursive tests/"
   },
   "author": "teachXchange",
   "license": "ISC",
