@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A platform for educators to exchange resources",
   "scripts": {
-    "start": "nodemon -L app.js",
+    "start": "nodemon -L app.js"
   },
   "author": "teachXchange",
   "license": "ISC",
