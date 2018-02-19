@@ -20,6 +20,10 @@ h1 {
     h1 {
       font-size: 40px; } }
 
+.italicize {
+  font-style: italic;
+}
+
 h2 {
   font-size: 47px; }
   @media (max-width: 768px) {
@@ -119,7 +123,7 @@ p {
 
 .is-sticky {
   background: #252a33;
-  opacity: 1; }
+  opacity: 0.7; }
 
 .transition {
   -webkit-transition: all 1s ease-in-out;
@@ -128,7 +132,6 @@ p {
   transition: all 1s ease-in-out; }
 
 .fixed {
-  border-bottom: 1px solid #636363;
   position: fixed;
   top: 0;
   left: 0;
@@ -137,8 +140,15 @@ p {
   @media (max-width: 992px) {
     .fixed {
       border: none;
-      background: #252a33; } }
+      background: #252a33;
+      opacity: 0.7;
+      } }
 
+
+.small-logo {
+  max-width: 30px;
+  height: auto;
+}
 .dropdown-menu {
   background: #030303; }
 
@@ -184,7 +194,7 @@ p {
   text-align: center; }
 
 .slider-content_wrap h5 {
-  color: #909090;
+  color: #FFF;
   font-weight: 400;
   margin: 24px 0; }
 
@@ -249,7 +259,7 @@ p {
   padding-right: 10px; }
 
 .slider-link {
-  color: #909090;
+  color: #FFF;
   margin: 45px 0 0;
   font-size: 19px; }
   @media (max-width: 480px) {
@@ -259,7 +269,7 @@ p {
       .slider-link span {
         display: block; } }
   .slider-link a {
-    color: #909090;
+    color: #FFF;
     text-decoration: underline;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
