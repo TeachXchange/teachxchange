@@ -65,8 +65,11 @@ p {
 .light-bg {
   background: #f3f4f7; }
 
+.middle-bg {
+  background: #33d6c8;
+}
 .dark-bg {
-  background: #252a33; }
+  background: rgba(37, 42, 51, 0.5); }
 
 /* ==============================================================
    HEADER
@@ -170,7 +173,7 @@ p {
   padding: 0 8px 0 0; }
 
 .slider {
-  background: url(../images/slider.jpg) no-repeat;
+  /*background: url(../images/slider.jpg) no-repeat;*/
   background-size: cover;
   min-height: 800px; }
   @media (max-width: 992px) {
@@ -523,7 +526,7 @@ footer {
   .copyright p {
     font-size: 18px;
     font-weight: 400;
-    color: #ccc;
+    color: white;
     margin: 0; }
   .copyright ul {
     margin: 25px 0 0;
@@ -532,7 +535,7 @@ footer {
       list-style: none;
       display: inline-block; }
       .copyright ul li a {
-        color: #ccc;
+        color: white;
         font-size: 22px;
         padding: 0 10px;
         opacity: 0.6;

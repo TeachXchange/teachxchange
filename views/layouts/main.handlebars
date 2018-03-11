@@ -29,6 +29,17 @@
 
     <link rel="stylesheet" href="/css/magnific-popup.css">
 
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/pace.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
@@ -88,16 +99,32 @@
                                 </li>
 
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">About</a>
+                                    <a class="nav-link" href="/landing">About</a>
                                 </li>
                                 
+                                {{#if cur_user}}
                                 <li class="nav-item active">
-                                  <a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Material</a>
+                                  <a href="/ecommerce" class="btn btn-outline-light top-btn"> Ecommerce </a>
                                 </li>
 
                                 <li class="nav-item active">
-                                  <a href="/login" class="btn btn-outline-light top-btn">Log In/Sign Up</a>
+                                  <a href="/logout" id="logout" class="btn btn-outline-light top-btn">Log Out</a>
                                 </li>
+
+                                {{else}}
+                                  <li class="nav-item active">
+                                    <a href="/login" class="btn btn-outline-light top-btn">Log In</a>
+                                  </li>
+
+                                  <li class="nav-item active">
+                                    <a href="/sign-up" class="btn btn-outline-light top-btn">Sign Up</a>
+                                  </li>
+
+                                {{/if}}
+                                
+                                
+                               
+
 
                             </ul>
                         </div>
@@ -106,6 +133,7 @@
             </div>
         </div>
     </div>
+
   
   <!--//END HEADER -->
 
@@ -139,13 +167,13 @@
   {{{ body }}}
 
   <!--============================= FOOTER =============================-->
-  <footer class="main-block dark-bg">
+  <footer class="main-block middle-bg">
       <div class="container">
           <div class="row">
               <div class="col-md-12">
                   <div class="copyright">
                       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      <p>Copyright &copy; 2018 Listing. All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                      <p>Copyright &copy; 2018 teachXchange. All rights reserved | Template by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
                       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       <ul>
                           <li><a href="#"><span class="ti-facebook"></span></a></li>
@@ -164,6 +192,18 @@
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/main.js"></script>
+
+  <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/vendor/animsition/js/animsition.min.js"></script>
+  <script src="/vendor/bootstrap/js/popper.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/vendor/select2/select2.min.js"></script>
+  <script src="/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/vendor/daterangepicker/daterangepicker.js"></script>
+  <script src="/vendor/countdowntime/countdowntime.js"></script>
+  <script src="/js/login.js"></script>
 
   <script type="text/javascript">
     $(window).scroll(function() {

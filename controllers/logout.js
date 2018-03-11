@@ -1,15 +1,18 @@
 const express = require('express');
+const firebase = require('firebase');
 
 module.exports = {
   registerRouter() {
     const router = express.Router();
 
-    router.post('/', this.logout);
+    router.get('/', this.logout);
 
     return router;
   },
   logout(req, res) {
-    req.logout();
-    res.redirect('/');
+
+    firebase.auth()
+    	.signOut()
+    	.then(() => res.render('landing'))
   },
 };

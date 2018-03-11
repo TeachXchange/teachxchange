@@ -1,5 +1,8 @@
 const express = require('express');
 const models = require('../models');
+const firebase = require("firebase");
+
+
 
 module.exports = {
   registerRouter() {
@@ -14,18 +17,13 @@ module.exports = {
     res.render('sign-up');
   },
   submit(req, res) {
-    models.User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    }).then((user) => {
-      req.login(user, () =>
-        res.redirect('/profile')
-      );
-    }).catch(() => {
-      res.render('sign-up');
-    });
+    const firstName = req.body.firstname;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    firebase.auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => { })
+      .catch(e => console.log(e.message));
   },
 };

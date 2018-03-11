@@ -14,7 +14,7 @@ fs
   });
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('landing');
 });
 
 module.exports = router;
