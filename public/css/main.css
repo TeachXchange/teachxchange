@@ -1185,7 +1185,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #33d6c8;
+    color: white;
     margin-top: 0;
     margin-bottom: 0;
 }

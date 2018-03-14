@@ -172,13 +172,13 @@ p {
   font-size: 14px;
   padding: 0 8px 0 0; }
 
-.slider {
-  /*background: url(../images/slider.jpg) no-repeat;*/
-  background-size: cover;
+/*.slider {
+*/  /*background: url(../images/slider.jpg) no-repeat;*/
+  /*background-size: cover;
   min-height: 800px; }
   @media (max-width: 992px) {
     .slider {
-      min-height: 700px; } }
+      min-height: 700px; } }*/
 
 .btn-outline-light {
   padding: 10px 16px; }
