@@ -14,7 +14,7 @@ html, body {
 
 body {
     background: #2ba59b;
-    font-family: "lora-regular", serif;
+    font-family: "montserrat-medium", sans-serif;
     font-size: 1.7rem;
     font-style: normal;
     font-weight: normal;
@@ -1191,7 +1191,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .subhead--dark {
-    color: #000000;
+    color: #FFF;
 }
 
 
@@ -2135,7 +2135,7 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
     background-color: #33d6c8;
-    color: #010507;
+    color: #FFF;
     position: relative;
 }
 
@@ -2185,7 +2185,7 @@ html.no-csstransitions .home-content__main {
 .stats h5 {
     font-family: "montserrat-semibold", sans-serif;
     margin-top: 1.8rem;
-    color: #000000;
+    color: #FFF;
     font-size: 1.8rem;
     line-height: 1.333;
     position: relative;
