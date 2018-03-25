@@ -3286,7 +3286,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus, footer a:active {
-    color: #33d6c8;
+    color: black;
 }
 
 footer .row {
