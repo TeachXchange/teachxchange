@@ -14,7 +14,7 @@ module.exports = {
     return router;
   },
   index(req, res) {
-    res.render('sign-up');
+    res.render('sign-up', { error: req.flash('error') });
   },
   submit(req, res) {
     const firstName = req.body.firstname;
@@ -24,6 +24,6 @@ module.exports = {
     firebase.auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => { })
-      .catch(e => console.log(e.message));
+      .catch(error =>res.render('sign-up', {error}) );
   },
 };
