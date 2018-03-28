@@ -20,6 +20,8 @@ module.exports = {
 
     router.get('/', Redirect.ifLoggedIn('feed'), this.index);
     router.post('/', this.login);
+    router.get('/reset', this.reset);
+    router.post('/reset', this.resetPassword);
 
     return router;
   },
@@ -43,4 +45,15 @@ module.exports = {
     //   successFlash: true,
     // })(req, res);
   },
+  reset(req, res) {
+    res.render('login/reset', {error: req.flash('error')});
+  },
+  resetPassword(req, res) {
+    firebase.auth().sendPasswordResetEmail(req.body.email).then(function() {
+      // Email sent.
+      res.render('login');
+    }).catch(function(error) {
+      // An error happened.
+    });
+  }
 };
