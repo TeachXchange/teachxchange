@@ -57,10 +57,10 @@ p {
   font-size: 15px; }
 
 .main-block {
-  padding: 90px 0; }
-  @media (max-width: 768px) {
+  padding: 0px 0; }
+  @media (max-width: 100px) {
     .main-block {
-      padding: 45px 0; } }
+      padding: 0px 0; } }
 
 .light-bg {
   background: #f3f4f7; }

@@ -23,7 +23,21 @@ module.exports = {
 
     firebase.auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => { })
+      .then(() => { 
+        firebase.database().ref('/users/' + firebase.auth().currentUser.uid).set({
+          firstName: req.body.firstname,
+          lastName: req.body.lastname,
+          email: req.body.email,
+          subject: req.body.subject,
+          gradelevel: req.body.gradelevel,
+          state: req.body.state
+        })
+        res.render('feed')
+      })
       .catch(error =>res.render('sign-up', {error}) );
+
+
+
+
   },
 };
