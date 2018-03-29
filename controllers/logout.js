@@ -13,6 +13,6 @@ module.exports = {
 
     firebase.auth()
     	.signOut()
-    	.then(() => res.render('landing'))
+    	.then(() => res.redirect('landing'))
   },
 };

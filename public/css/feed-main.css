@@ -834,7 +834,7 @@ input[type="button"] {
    -webkit-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
    background-color: transparent;
-   border: .2rem solid #c5c5c5;
+   border: solid white;
 }
 
 .btn:hover,
@@ -847,9 +847,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-   background-color: #b8b8b8;
-   border-color: #b8b8b8;
-   color: #000000;
+   background-color: #33d6c8;
+   border-color: #33d6c8;
+   color: black;
    outline: 0;
 }
 

@@ -32,9 +32,9 @@ module.exports = {
           gradelevel: req.body.gradelevel,
           state: req.body.state
         })
-        res.render('feed')
+        res.redirect('feed')
       })
-      .catch(error =>res.render('sign-up', {error}) );
+      .catch(error =>res.redirect('sign-up', {error}) );
 
 
 

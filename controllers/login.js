@@ -34,9 +34,9 @@ module.exports = {
 
     firebase.auth()
       .signInWithEmailAndPassword(email, password)
-      .then( user =>  {res.render('feed'); })
+      .then( user =>  {res.redirect('feed'); })
       .catch(error => { 
-        res.render('login', {error}); 
+        res.redirect('login', {error}); 
       });
     // passport.authenticate('local', {
     //   successRedirect: '/profile',
@@ -51,7 +51,7 @@ module.exports = {
   resetPassword(req, res) {
     firebase.auth().sendPasswordResetEmail(req.body.email).then(function() {
       // Email sent.
-      res.render('login');
+      res.redirect('login');
     }).catch(function(error) {
       // An error happened.
     });
