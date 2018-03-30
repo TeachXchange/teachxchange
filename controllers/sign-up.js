@@ -34,7 +34,7 @@ module.exports = {
         })
         res.redirect('feed')
       })
-      .catch(error =>res.redirect('sign-up', {error}) );
+      .catch(error =>res.render('sign-up', {error}) );
 
 
 

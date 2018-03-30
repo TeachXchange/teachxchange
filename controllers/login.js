@@ -36,7 +36,7 @@ module.exports = {
       .signInWithEmailAndPassword(email, password)
       .then( user =>  {res.redirect('feed'); })
       .catch(error => { 
-        res.redirect('login', {error}); 
+        res.render('login', {error}); 
       });
     // passport.authenticate('local', {
     //   successRedirect: '/profile',
