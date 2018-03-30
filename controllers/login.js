@@ -51,7 +51,7 @@ module.exports = {
   resetPassword(req, res) {
     firebase.auth().sendPasswordResetEmail(req.body.email).then(function() {
       // Email sent.
-      res.redirect('login');
+      res.redirect('/login');
     }).catch(function(error) {
       // An error happened.
     });
