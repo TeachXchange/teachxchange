@@ -1,5 +1,4 @@
 const express = require('express');
-const passport = require('../middlewares/authentication');
 const Redirect = require('../middlewares/redirect');
 const firebase = require("firebase");
 

@@ -1,5 +1,4 @@
 const express = require('express');
-const models = require('../models');
 
 module.exports = {
   registerRouter() {
