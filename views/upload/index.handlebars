@@ -10,9 +10,9 @@
     <div class="col-full">
        
 
-        <form id="upload" action="/upload" method="post" name="upload">
+        <form id="upload" action="/upload" method="post" name="upload" enctype="multipart/form-data">
             <label class="custom-file">
-                <input type="file" id="files" class="custom-file-input" multiple name="files[]">
+                <input type="file" id="file" class="custom-file-input" name="file">
                 <span class="custom-file-control"></span>
             </label>
             <label for="inputType">Input Type</label>
