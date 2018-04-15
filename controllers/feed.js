@@ -5,7 +5,7 @@ module.exports = {
   registerRouter() {
     const router = express.Router();
 
-    router.get('/', this.index);
+    router.get('/', Redirect.ifNotLoggedIn(), this.index);
 
     return router;
   },
