@@ -1,5 +1,8 @@
 const express = require('express');
 const Redirect = require('../middlewares/redirect');
+const firebase = require('firebase')
+var admin = require("firebase-admin");
+
 
 module.exports = {
   registerRouter() {
@@ -10,6 +13,15 @@ module.exports = {
     return router;
   },
   index(req, res) {
-    res.render('feed');
+  	var db = firebase.database();
+	var ref = db.ref("/pictures/");
+	ref.on("value", function(snapshot) {
+		const posts = snapshot.val();
+		console.log(posts)
+		res.render('feed', {posts});
+	}, function (errorObject) {
+	  console.log("The read failed: " + errorObject.code);
+	});
+    
   },
 };

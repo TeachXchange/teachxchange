@@ -44,10 +44,11 @@ module.exports = {
         const uploadFileName = req.file.originalname
         const bucket = storage.bucket("gs://teachxchange-5bff2.appspot.com");
         const blob = bucket.file(uploadFileName + '-' + Date.now());
+
         const blobStream = blob.createWriteStream();
-        console.log(blobStream)
         blobStream.on('finish', () => {
         // The public URL can be used to directly access the file via HTTP.
+          blob.makePublic();
           const filename = blob.name;
           const childPath = filename.substr(0,filename.lastIndexOf('.')) + '-' + Date.now();
           const publicUrl = format(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
@@ -59,11 +60,13 @@ module.exports = {
             'note': req.body.note,
             'publicUrl': publicUrl
           })
-          res.status(200).redirect('feed');
+
+          req.body.imageUrl = publicUrl
         });
 
-        blobStream.end(req.file.buffer);
+        // blobStream.end(req.file.buffer);
 
+        res.redirect('feed')
         
 
 
