@@ -41,9 +41,9 @@ module.exports = {
       }
       else {
         
-        
+        const uploadFileName = req.file.originalname
         const bucket = storage.bucket("gs://teachxchange-5bff2.appspot.com");
-        const blob = bucket.file(req.file.originalname);
+        const blob = bucket.file(uploadFileName + '-' + Date.now());
         const blobStream = blob.createWriteStream();
         console.log(blobStream)
         blobStream.on('finish', () => {
